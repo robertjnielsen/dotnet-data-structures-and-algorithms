@@ -2,7 +2,7 @@
 
 namespace BinarySearch
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -11,7 +11,7 @@ namespace BinarySearch
             BinarySearch(binaryArray, key);
         }
 
-        static int BinarySearch(int[] arr, int key)
+        public static int BinarySearch(int[] arr, int key)
         {
             // Declare left and right limit values.
             int left = 0;
@@ -19,7 +19,7 @@ namespace BinarySearch
 
             // Declare a loop that checks alters the left or right values
             // based on if the key is greater than / less than the current middle index.
-            while (left <= right)
+            while (left < right)
             {
                 // Declare the middle index value.
                 int middle = (left + right) / 2;
