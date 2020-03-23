@@ -13,5 +13,19 @@ namespace LinkedListTests
 
             Assert.Null(ll.Head);
         }
+
+        [Theory]
+        [InlineData(42)]
+        [InlineData(3)]
+        [InlineData(9)]
+        [InlineData(27)]
+        public void CanInsertANewNodeIntoALinkedList(int value)
+        {
+            LinkList ll = new LinkList();
+
+            ll.Insert(value);
+
+            Assert.Equal(value, ll.Head.Value);
+        }
     }
 }
