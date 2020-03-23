@@ -92,5 +92,20 @@ namespace LinkedListTests
 
             Assert.False(valueFound);
         }
+
+        [Fact]
+        public void CanReturnAStringCollectionOfAllExistingValuesWithinALinkedList()
+        {
+            LinkList ll = new LinkList();
+            ll.Insert(42);
+            ll.Insert(3);
+            ll.Insert(9);
+            ll.Insert(27);
+
+            string expectedString = "27 -> 9 -> 3 -> 42 -> NULL";
+            string listString = ll.ToString();
+
+            Assert.Equal(expectedString, listString);
+        }
     }
 }
