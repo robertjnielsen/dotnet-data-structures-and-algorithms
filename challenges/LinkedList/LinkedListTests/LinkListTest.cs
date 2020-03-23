@@ -49,5 +49,20 @@ namespace LinkedListTests
             Assert.Equal(4, listLength);
 
         }
+
+        [Fact]
+        public void HeadPointsToFirstNodeInLinkedList()
+        {
+            LinkList ll = new LinkList();
+
+            ll.Insert(42);
+            ll.Insert(3);
+            ll.Insert(9);
+            ll.Insert(27);
+
+            Node head = ll.Head;
+
+            Assert.Equal(27, head.Value);
+        }
     }
 }
