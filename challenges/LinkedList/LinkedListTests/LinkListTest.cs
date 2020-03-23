@@ -27,5 +27,27 @@ namespace LinkedListTests
 
             Assert.Equal(value, ll.Head.Value);
         }
+
+        [Fact]
+        public void CanProperlyInsertMultipleNodesIntoALinkedList()
+        {
+            LinkList ll = new LinkList();
+            int listLength = 0;
+
+            ll.Insert(42);
+            ll.Insert(3);
+            ll.Insert(9);
+            ll.Insert(27);
+
+            Node current = ll.Head;
+            while (current != null)
+            {
+                listLength++;
+                current = current.Next;
+            }
+
+            Assert.Equal(4, listLength);
+
+        }
     }
 }
