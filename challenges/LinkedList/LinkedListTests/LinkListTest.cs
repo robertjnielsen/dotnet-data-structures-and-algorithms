@@ -7,9 +7,11 @@ namespace LinkedListTests
     public class LinkListTest
     {
         [Fact]
-        public void Test1()
+        public void EmptyLinkedListCanBeInstantiated()
         {
+            LinkList ll = new LinkList();
 
+            Assert.Null(ll.Head);
         }
     }
 }
