@@ -64,5 +64,33 @@ namespace LinkedListTests
 
             Assert.Equal(27, head.Value);
         }
+
+        [Fact]
+        public void CanSuccessfullyFindAnExistingValueWithinALinkedList()
+        {
+            LinkList ll = new LinkList();
+            ll.Insert(42);
+            ll.Insert(3);
+            ll.Insert(9);
+            ll.Insert(27);
+
+            bool valueFound = ll.Includes(3);
+
+            Assert.True(valueFound);
+        }
+
+        [Fact]
+        public void CanSuccessfullyDetermineThatAValueDoesNotExistWithinALinkedList()
+        {
+            LinkList ll = new LinkList();
+            ll.Insert(42);
+            ll.Insert(3);
+            ll.Insert(9);
+            ll.Insert(27);
+
+            bool valueFound = ll.Includes(19);
+
+            Assert.False(valueFound);
+        }
     }
 }
