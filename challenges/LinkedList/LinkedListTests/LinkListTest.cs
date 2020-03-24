@@ -107,5 +107,81 @@ namespace LinkedListTests
 
             Assert.Equal(expectedString, listString);
         }
+
+        [Fact]
+        public void CanSuccessfullyAddANodeToTheEndOfTheLinkedList()
+        {
+            LinkList ll = new LinkList();
+            ll.Insert(5);
+            ll.Insert(9);
+            ll.Append(19);
+
+            Node current = ll.Head;
+            while (current.Next != null)
+            {
+                current = current.Next;
+            }
+            int lastNodeValue = current.Value;
+
+            Assert.Equal(19, lastNodeValue);
+        }
+
+        [Fact]
+        public void CanAddMultipleNodesToTheEndOfALinkedList()
+        {
+            LinkList ll = new LinkList();
+            ll.Insert(5);
+            ll.Insert(9);
+            ll.Append(19);
+            ll.Append(27);
+            ll.Append(42);
+
+            Node current = ll.Head;
+            while (current.Next != null)
+            {
+                current = current.Next;
+            }
+            int lastNodeValue = current.Value;
+
+            Assert.Equal(42, lastNodeValue);
+        }
+
+        [Fact]
+        public void CanAddANodeBeforeAnotherNodeInTheMiddleOfTheLinkedList()
+        {
+            LinkList ll = new LinkList();
+            ll.Insert(3);
+            ll.Append(9);
+            ll.Append(27);
+            ll.Append(42);
+
+            ll.InsertBefore(27, 19);
+            Node current = ll.Head;
+            while (current.Next.Value != 27)
+            {
+                current = current.Next;
+            }
+
+            Assert.Equal(19, current.Value);
+        }
+
+        [Fact]
+        public void CanSuccessfullyInsertANewNodeAfterANodeInALinkedList()
+        {
+            LinkList ll = new LinkList();
+            ll.Insert(3);
+            ll.Append(9);
+            ll.Append(27);
+            ll.Append(42);
+
+            ll.InsertAfter(9, 19);
+            Node current = ll.Head;
+            while (current.Value != 19)
+            {
+                current = current.Next;
+            }
+
+            Assert.Equal(19, current.Value);
+        }
     }
 }

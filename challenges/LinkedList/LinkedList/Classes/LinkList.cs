@@ -30,6 +30,106 @@ namespace LinkedList.Classes
         }
 
         /// <summary>
+        /// Inserts a new Node object to the LinkList before a specified existing Node.
+        /// </summary>
+        /// <param name="existingValue">The value of the Node to insert before.</param>
+        /// <param name="newValue">The value of the new Node object.</param>
+        public void InsertBefore(int existingValue, int newValue)
+        {
+            try
+            {
+                // Instantiate a new Node object.
+                Node newNode = new Node();
+
+                // Assign the new Node object's value to the inputted value.
+                newNode.Value = newValue;
+
+                // Assign Current to the Head of the LinkList.
+                Current = Head;
+
+                // Traverse the LinkList until we reach the Node we want to insert before.
+                while (Current.Next.Value != existingValue)
+                {
+                    Current = Current.Next;
+                }
+
+                // Assign the new Node's Next property to the Node with the value we want to insert before.
+                newNode.Next = Current.Next;
+
+                // Assign Current's Next property to the new Node object.
+                Current.Next = newNode;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Inserts a new Node object to the LinkList after a specified existing Node.
+        /// </summary>
+        /// <param name="existingValue">The value of the Node to insert after.</param>
+        /// <param name="newValue">The value of the new Node object.</param>
+        public void InsertAfter(int existingValue, int newValue)
+        {
+            try
+            {
+                // Instantiate a new Node object.
+                Node newNode = new Node();
+
+                // Assign the new Node object's value to the inputted value.
+                newNode.Value = newValue;
+
+                // Assign Current to the Head of the LinkList.
+                Current = Head;
+
+                // Traverse the LinkList to find the Node to insert after.
+                while (Current.Value != existingValue)
+                {
+                    Current = Current.Next;
+                }
+
+                // Assign the new Node's Next property to the Node after the Current Node.
+                newNode.Next = Current.Next;
+
+                // Assign the Current Node's Next property to the new Node object.
+                Current.Next = newNode;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Appends a new Node into the end of the LinkList.
+        /// </summary>
+        /// <param name="value">The value of the new Node.</param>
+        public void Append(int value)
+        {
+            // Instantiate a new Node object.
+            Node newNode = new Node();
+
+            // Set the new Node object's value to the inputted value.
+            newNode.Value = value;
+
+            // Assign Current to the Head of the LinkList.
+            Current = Head;
+
+            // Traverse the LinkList until we reach the last Node object.
+            while (Current.Next != null)
+            {
+                Current = Current.Next;
+            }
+
+            // Assign the new Node object's Next value as null.
+            newNode.Next = null;
+
+            // Assign Current's Next value as the new Node object.
+            Current.Next = newNode;
+        }
+
+        /// <summary>
         /// Traverse through the LinkList to determine if any Node objects hold a desired value.
         /// </summary>
         /// <param name="value">The value to search for within the LinkList.</param>
