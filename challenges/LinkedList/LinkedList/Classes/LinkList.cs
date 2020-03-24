@@ -30,6 +30,23 @@ namespace LinkedList.Classes
         }
 
         /// <summary>
+        /// Appends a new Node into the end of the LinkList.
+        /// </summary>
+        /// <param name="value">The value of the new Node.</param>
+        public void Append(int value)
+        {
+            Node newNode = new Node();
+            newNode.Value = value;
+            Current = Head;
+            while (Current.Next != null)
+            {
+                Current = Current.Next;
+            }
+            newNode.Next = null;
+            Current.Next = newNode;
+        }
+
+        /// <summary>
         /// Traverse through the LinkList to determine if any Node objects hold a desired value.
         /// </summary>
         /// <param name="value">The value to search for within the LinkList.</param>
