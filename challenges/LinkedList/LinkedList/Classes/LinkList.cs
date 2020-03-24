@@ -29,6 +29,11 @@ namespace LinkedList.Classes
             Head = newNode;
         }
 
+        /// <summary>
+        /// Inserts a new Node object to the LinkList before a specified existing Node.
+        /// </summary>
+        /// <param name="existingValue">The value of the Node to insert before.</param>
+        /// <param name="newValue">The value of the new Node object.</param>
         public void InsertBefore(int existingValue, int newValue)
         {
             // Instantiate a new Node object.
@@ -50,6 +55,35 @@ namespace LinkedList.Classes
             newNode.Next = Current.Next;
 
             // Assign Current's Next property to the new Node object.
+            Current.Next = newNode;
+        }
+
+        /// <summary>
+        /// Inserts a new Node object to the LinkList after a specified existing Node.
+        /// </summary>
+        /// <param name="existingValue">The value of the Node to insert after.</param>
+        /// <param name="newValue">The value of the new Node object.</param>
+        public void InsertAfter(int existingValue, int newValue)
+        {
+            // Instantiate a new Node object.
+            Node newNode = new Node();
+
+            // Assign the new Node object's value to the inputted value.
+            newNode.Value = newValue;
+
+            // Assign Current to the Head of the LinkList.
+            Current = Head;
+
+            // Traverse the LinkList to find the Node to insert after.
+            while (Current.Value != existingValue)
+            {
+                Current = Current.Next;
+            }
+
+            // Assign the new Node's Next property to the Node after the Current Node.
+            newNode.Next = Current.Next;
+
+            // Assign the Current Node's Next property to the new Node object.
             Current.Next = newNode;
         }
 
