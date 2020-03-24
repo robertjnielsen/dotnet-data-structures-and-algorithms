@@ -164,5 +164,24 @@ namespace LinkedListTests
 
             Assert.Equal(19, current.Value);
         }
+
+        [Fact]
+        public void CanSuccessfullyInsertANewNodeAfterANodeInALinkedList()
+        {
+            LinkList ll = new LinkList();
+            ll.Insert(3);
+            ll.Append(9);
+            ll.Append(27);
+            ll.Append(42);
+
+            ll.InsertAfter(9, 19);
+            Node current = ll.Head;
+            while (current.Value != 19)
+            {
+                current = current.Next;
+            }
+
+            Assert.Equal(19, current.Value);
+        }
     }
 }
