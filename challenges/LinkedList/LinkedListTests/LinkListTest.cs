@@ -145,5 +145,24 @@ namespace LinkedListTests
 
             Assert.Equal(42, lastNodeValue);
         }
+
+        [Fact]
+        public void CanAddANodeBeforeAnotherNodeInTheMiddleOfTheLinkedList()
+        {
+            LinkList ll = new LinkList();
+            ll.Insert(3);
+            ll.Append(9);
+            ll.Append(27);
+            ll.Append(42);
+
+            ll.InsertBefore(27, 19);
+            Node current = ll.Head;
+            while (current.Next.Value != 27)
+            {
+                current = current.Next;
+            }
+
+            Assert.Equal(19, current.Value);
+        }
     }
 }
