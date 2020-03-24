@@ -107,5 +107,43 @@ namespace LinkedListTests
 
             Assert.Equal(expectedString, listString);
         }
+
+        [Fact]
+        public void CanSuccessfullyAddANodeToTheEndOfTheLinkedList()
+        {
+            LinkList ll = new LinkList();
+            ll.Insert(5);
+            ll.Insert(9);
+            ll.Append(19);
+
+            Node current = ll.Head;
+            while (current.Next != null)
+            {
+                current = current.Next;
+            }
+            int lastNodeValue = current.Value;
+
+            Assert.Equal(19, lastNodeValue);
+        }
+
+        [Fact]
+        public void CanAddMultipleNodesToTheEndOfALinkedList()
+        {
+            LinkList ll = new LinkList();
+            ll.Insert(5);
+            ll.Insert(9);
+            ll.Append(19);
+            ll.Append(27);
+            ll.Append(42);
+
+            Node current = ll.Head;
+            while (current.Next != null)
+            {
+                current = current.Next;
+            }
+            int lastNodeValue = current.Value;
+
+            Assert.Equal(42, lastNodeValue);
+        }
     }
 }
