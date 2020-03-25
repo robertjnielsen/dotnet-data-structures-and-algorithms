@@ -166,7 +166,7 @@ namespace LinkedList.Classes
             // Throw exception if value passed is a negative integer.
             if (numFromEnd < 0)
             {
-                throw new ArgumentOutOfRangeException("Your search paramater must be a positive number.");
+                throw new ArgumentOutOfRangeException("Your search parameter must be a positive number.");
             }
 
             // Specify Current as the Head to initiate traversal of LinkList.
