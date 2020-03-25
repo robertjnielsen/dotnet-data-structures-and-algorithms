@@ -91,7 +91,7 @@ Space is **O(n)** because the method is adding a new StringBuilder instance to m
 
 The requirement for this challenge was to whiteboard one of the methods in the set. I chose to whiteboard the `Append()` method.
 
-![Append Method Whiteboard Visual](../../assets/img/LinkListAppend.png)
+![Append Method Whiteboard Visual](../../Assets/Images/LinkListAppend.png)
 
 ## Change Log
 
