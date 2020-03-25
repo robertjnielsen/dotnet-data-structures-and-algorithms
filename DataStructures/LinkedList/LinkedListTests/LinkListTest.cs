@@ -227,5 +227,18 @@ namespace LinkedListTests
 
             Assert.Equal(listLength, kthElement);
         }
+
+        [Fact]
+        public void DetermineIfKIsNotAPositiveIntegerWhenLocatingKthElement()
+        {
+            LinkList ll = new LinkList();
+            ll.Insert(3);
+            ll.Append(9);
+            ll.Append(19);
+            ll.Append(27);
+            ll.Append(42);
+
+            Assert.Throws<ArgumentOutOfRangeException>(() => ll.KthFromEnd(-1));
+        }
     }
 }
