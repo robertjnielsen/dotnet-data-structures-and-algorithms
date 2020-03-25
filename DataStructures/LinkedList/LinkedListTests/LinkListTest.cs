@@ -183,5 +183,27 @@ namespace LinkedListTests
 
             Assert.Equal(19, current.Value);
         }
+
+        [Fact]
+        public void DetermineIfKIsGreaterThanLinkedListLengthWhenLocatingKthElement()
+        {
+            LinkList ll = new LinkList();
+            ll.Insert(3);
+            ll.Append(9);
+            ll.Append(19);
+            ll.Append(27);
+            ll.Append(42);
+
+            int kthElement = 7;
+            int listLength = 0;
+            Node current = ll.Head;
+            while (current != null)
+            {
+                current = current.Next;
+                listLength++;
+            }
+
+            Assert.True(kthElement > listLength);
+        }
     }
 }
