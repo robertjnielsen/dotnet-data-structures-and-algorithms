@@ -178,8 +178,8 @@ namespace LinkedList.Classes
             // Traverse the LinkList and increment listLength for each Node object.
             while (Current != null)
             {
-                Current = Current.Next;
                 listLength++;
+                Current = Current.Next;
             }
 
             // Throw exception if value passed is larger than the length of the LinkList.
@@ -192,7 +192,7 @@ namespace LinkedList.Classes
             Current = Head;
 
             // Traverse the List to the specified Node element.
-            for (int i = 0; i < listLength - numFromEnd; i++)
+            for (int i = 1; i < listLength - numFromEnd; i++)
             {
                 Current = Current.Next;
             }
