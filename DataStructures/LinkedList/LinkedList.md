@@ -15,14 +15,16 @@ To learn about Linked Lists, we were to create our own implementation of a Linke
   - The first argument passed is the value of the Node to insert before.
   - The second argument passed is the value of the new Node to be inserted.
 - Define a method called `Includes` which takes any value as an argument, and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
+- Define a method called `KthFromEnd` which takes in an integer search parameter `k`, and returns the value of a Node object that is `k` elements from the end of the Linked List.
 - Define a method called `ToString` which takes in no arguments, and returns a string representing all the values in the Linked List, formatted as:
 	- `"valA -> valB -> valC -> NULL"`
 
 ## Inputs And Expected Outputs
 Inputs and outputs are method dependant.
 - Inputs generally consist of integer values to represent Node values.
-- Outputs are the instantiation of new Node objects being added to the Linked List in most methods.
+- Outputs are generally the instantiation of new Node objects being added to the Linked List in most methods.
   - `Includes()` outputs a boolean value if Node with value exists in the Linked List.
+  - `KthFromEnd()` outputs the value of a Node that is `k` elements from the end of the Linked List.
   - `ToString()` outputs a string representing the Linked List to the console.
 
 ## Big O
@@ -77,6 +79,16 @@ Time is **O(n)** because it doesn't matter if the Linked List contains 1 or 100 
 
 Space is **O(1)** because the method is not instantiating or adding any new data to memory.
 
+#### KthFromEnd() Method
+
+|Time|Space|
+|:---:|:---:|
+|O(n)|O(1)|
+
+Time is **O(n)** because the method has to traverse the entire Linked List to determine the length of the List, and find the correct Node object within it.
+
+Space is **O(1)** because the method is not instantiating any new objects, nor returning anything that didn't already exist in memory.
+
 #### ToString() Method
 
 |Time|Space|
@@ -89,11 +101,21 @@ Space is **O(n)** because the method is adding a new StringBuilder instance to m
 
 ## Whiteboard Visual
 
-The requirement for this challenge was to whiteboard one of the methods in the set. I chose to whiteboard the `Append()` method.
+#### Append() Method
 
 ![Append Method Whiteboard Visual](../../Assets/Images/LinkListAppend.png)
 
+#### KthFromEnd() Method
+
+![KthFromEnd Method Whiteboard Visual](../../Assets/Images/KthFromEnd.png)
+
 ## Change Log
+
+**1.4** - 20200325
+- Documentation complete to current version.
+- All relevant method tests passed.
+- `KthFromEnd` method complete.
+- Whiteboard visual complete for `KthFromEnd` method.
 
 **1.3** - 20200324
 - Documentation complete to current version.
