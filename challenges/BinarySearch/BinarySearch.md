@@ -21,7 +21,7 @@ I still have a lot to learn about Big O at this time.
 
 ## Whiteboard Visual
 
-![Whiteboard Image For BinarySearch Algorithm](../../assets/img/BinarySearch.png)
+![Whiteboard Image For BinarySearch Algorithm](../../Assets/Images/BinarySearch.png)
 
 ## Change Log
 

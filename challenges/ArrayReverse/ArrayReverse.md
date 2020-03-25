@@ -15,7 +15,7 @@ Write a method called **ReverseArray** that takes in an integer array as an argu
 We'll get there, still learning Big O / Time & Space efficiency.
 
 ## Whiteboard Visual
-![ArrayReverse Whiteboard](../../assets/img/ArrayReverse.jpg)
+![ArrayReverse Whiteboard](../../Assets/Images/ArrayReverse.jpg)
 
 ## Change Log
 **1.0**: 20200317

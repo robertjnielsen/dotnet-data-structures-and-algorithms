@@ -14,7 +14,7 @@ Write a method called **InsertShiftArray** that takes in an array of integers, a
 While I still haven't learned, and don't fully understand Big O and efficiency, I feel that this problem could be solved in a more efficient manner. I feel this way because it seems to me that it takes more steps than it probably should. I'm guessing that would be a time factor in Big O notation.
 
 ## Whiteboard Visual
-![InsertShiftArray Whiteboard Image](../../assets/img/InsertShiftArray.png)
+![InsertShiftArray Whiteboard Image](../../Assets/Images/InsertShiftArray.png)
 
 ## Change Log
 **1.2** - 20200318

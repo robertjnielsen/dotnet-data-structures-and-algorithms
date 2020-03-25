@@ -5,7 +5,7 @@ __Author: [Robert Nielsen](https://github.com/robertjnielsen)__
 This repository contains all of the DSA / Code Challenges from the Code Fellows 401 .NET / C# course.
 
 ## Table Of Contents
-1. [ReverseArray](/challenges/ArrayReverse/ArrayReverse.md)
-2. [InsertShiftArray](/challenges/InsertShiftArray/InsertShiftArray.md)
-3. [BinarySearch](/challenges/BinarySearch/BinarySearch.md)
-4. [Linked Lists](/challenges/LinkedList/LinkedList.md)
+1. [ReverseArray](/Challenges/ArrayReverse/ArrayReverse.md)
+2. [InsertShiftArray](/Challenges/InsertShiftArray/InsertShiftArray.md)
+3. [BinarySearch](/Challenges/BinarySearch/BinarySearch.md)
+4. [Linked Lists](/DataStructures/LinkedList/LinkedList.md)
