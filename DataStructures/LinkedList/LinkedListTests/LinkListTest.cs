@@ -183,5 +183,75 @@ namespace LinkedListTests
 
             Assert.Equal(19, current.Value);
         }
+
+        [Fact]
+        public void DetermineIfKIsGreaterThanLinkedListLengthWhenLocatingKthElement()
+        {
+            LinkList ll = new LinkList();
+            ll.Insert(3);
+            ll.Append(9);
+            ll.Append(19);
+            ll.Append(27);
+            ll.Append(42);
+
+            Assert.Throws<ArgumentOutOfRangeException>(() => ll.KthFromEnd(7));
+        }
+
+        [Fact]
+        public void DetermineIfKIsEqualToLinkedListLengthWhenLocatingKthElement()
+        {
+            LinkList ll = new LinkList();
+            ll.Insert(3);
+            ll.Append(9);
+            ll.Append(19);
+            ll.Append(27);
+            ll.Append(42);
+
+            int kthElement = 5;
+            int listLength = 0;
+            Node current = ll.Head;
+            while (current != null)
+            {
+                current = current.Next;
+                listLength++;
+            }
+
+            Assert.Equal(listLength, kthElement);
+        }
+
+        [Fact]
+        public void DetermineIfKIsNotAPositiveIntegerWhenLocatingKthElement()
+        {
+            LinkList ll = new LinkList();
+            ll.Insert(3);
+            ll.Append(9);
+            ll.Append(19);
+            ll.Append(27);
+            ll.Append(42);
+
+            Assert.Throws<ArgumentOutOfRangeException>(() => ll.KthFromEnd(-1));
+        }
+
+        [Fact]
+        public void DetermineIfKIsFoundWhereLinkedListLengthIsOneWhenLocatingKthElement()
+        {
+            LinkList ll = new LinkList();
+            ll.Insert(3);
+
+            Assert.Equal(3, ll.KthFromEnd(0));
+        }
+
+        [Fact]
+        public void DetermineThatKthElementCanBeFoundWhenLocatingKthElement()
+        {
+            LinkList ll = new LinkList();
+            ll.Insert(3);
+            ll.Append(9);
+            ll.Append(19);
+            ll.Append(27);
+            ll.Append(42);
+
+            Assert.Equal(3, ll.KthFromEnd(4));
+        }
     }
 }

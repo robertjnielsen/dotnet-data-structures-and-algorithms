@@ -157,6 +157,50 @@ namespace LinkedList.Classes
         }
 
         /// <summary>
+        /// Traverses a LinkList and returns the value of the Node object K elements from the end of the List (where K is the search paramater passed).
+        /// </summary>
+        /// <param name="numFromEnd">The number of elements from the end of the List to locate.</param>
+        /// <returns>Returns the value of the Node object K elements from the end of the List.</returns>
+        public int KthFromEnd(int numFromEnd)
+        {
+            // Throw exception if value passed is a negative integer.
+            if (numFromEnd < 0)
+            {
+                throw new ArgumentOutOfRangeException("Your search parameter must be a positive number.");
+            }
+
+            // Specify Current as the Head to initiate traversal of LinkList.
+            Current = Head;
+
+            // Declare an integer to count the length of the LinkList.
+            int listLength = 0;
+
+            // Traverse the LinkList and increment listLength for each Node object.
+            while (Current != null)
+            {
+                listLength++;
+                Current = Current.Next;
+            }
+
+            // Throw exception if value passed is larger than the length of the LinkList.
+            if (numFromEnd > listLength)
+            {
+                throw new ArgumentOutOfRangeException("Your search parameter is larger than the total number of Node objects in the List.");
+            }
+
+            // Reset Current back to the Head to traverse the List again.
+            Current = Head;
+
+            // Traverse the List to the specified Node element.
+            for (int i = 1; i < listLength - numFromEnd; i++)
+            {
+                Current = Current.Next;
+            }
+
+            return Current.Value;
+        }
+
+        /// <summary>
         /// Traverses through the LinkList, and utilizes StringBuilder to return a string that contains the value of each Node object in the list.
         /// </summary>
         /// <returns>A string containing the value of each Node object in the LinkList.</returns>
