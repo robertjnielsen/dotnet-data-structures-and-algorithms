@@ -194,16 +194,7 @@ namespace LinkedListTests
             ll.Append(27);
             ll.Append(42);
 
-            int kthElement = 7;
-            int listLength = 0;
-            Node current = ll.Head;
-            while (current != null)
-            {
-                current = current.Next;
-                listLength++;
-            }
-
-            Assert.True(kthElement > listLength);
+            Assert.Throws<ArgumentOutOfRangeException>(() => ll.KthFromEnd(7));
         }
 
         [Fact]
