@@ -8,4 +8,4 @@ This repository contains all of the DSA / Code Challenges from the Code Fellows 
 1. [ReverseArray](/Challenges/ArrayReverse/ArrayReverse.md)
 2. [InsertShiftArray](/Challenges/InsertShiftArray/InsertShiftArray.md)
 3. [BinarySearch](/Challenges/BinarySearch/BinarySearch.md)
-4. [Linked Lists](/DataStructures/LinkedList/LinkedList.md)
+4. [Linked Lists](/DataStructures/LinkedList/LinkedList.m)
