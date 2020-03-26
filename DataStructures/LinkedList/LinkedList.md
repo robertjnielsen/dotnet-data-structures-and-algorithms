@@ -18,6 +18,7 @@ To learn about Linked Lists, we were to create our own implementation of a Linke
 - Define a method called `KthFromEnd` which takes in an integer search parameter `k`, and returns the value of a Node object that is `k` elements from the end of the Linked List.
 - Define a method called `ToString` which takes in no arguments, and returns a string representing all the values in the Linked List, formatted as:
 	- `"valA -> valB -> valC -> NULL"`
+- Define a method called `MergeLists` which takes in two Linked Lists as arguments, and returns one of the Lists merged with the other List in a zipper fashion.
 
 ## Inputs And Expected Outputs
 Inputs and outputs are method dependant.
@@ -26,6 +27,7 @@ Inputs and outputs are method dependant.
   - `Includes()` outputs a boolean value if Node with value exists in the Linked List.
   - `KthFromEnd()` outputs the value of a Node that is `k` elements from the end of the Linked List.
   - `ToString()` outputs a string representing the Linked List to the console.
+  - `MergeLists()` takes in two Linked Lists as arguments / parameters and outputs one of the lists merged with the other list.
 
 ## Big O
 
@@ -99,6 +101,16 @@ Time is **O(n)** because it doesn't matter if the Linked List contains 1 or 100 
 
 Space is **O(n)** because the method is adding a new StringBuilder instance to memory.
 
+#### MergeLists() Method
+
+|Time|Space|
+|:---:|:---:|
+|O(n)|O(1)|
+
+Time is **O(n)** because the method has to traverse through both lists in their entirety to determine where Node references will point.
+
+Space is **O(1)** because nothing new is being instantiated or returned, other than what was passed as an argument to the method.
+
 ## Whiteboard Visual
 
 #### Append() Method
@@ -109,7 +121,17 @@ Space is **O(n)** because the method is adding a new StringBuilder instance to m
 
 ![KthFromEnd Method Whiteboard Visual](../../Assets/Images/KthFromEnd.png)
 
+#### MergeLists() Method
+
+![MergeLists Method Whiteboard Visual](../../Assets/Images/MergeLists.jpg)
+
 ## Change Log
+
+**1.5** - 20200326
+- Documentation complete to current version.
+- All relevant method tests passed.
+- `MergeLists` method complete.
+- Whiteboard visual complete for `MergeLists` method.
 
 **1.4** - 20200325
 - Documentation complete to current version.
