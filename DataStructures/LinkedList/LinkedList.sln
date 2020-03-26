@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedList", "LinkedList\LinkedList.csproj", "{12281A6D-27CC-424B-97B5-4106D0567D30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListTests", "LinkedListTests\LinkedListTests.csproj", "{A9BD1852-DFE1-400E-8BB1-908E467DDCF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedListTests", "LinkedListTests\LinkedListTests.csproj", "{A9BD1852-DFE1-400E-8BB1-908E467DDCF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListMerge", "LinkedListMerge\LinkedListMerge.csproj", "{8FD36849-D16E-4584-9A5C-79A6D36838DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListMergeTests", "LinkedListMergeTests\LinkedListMergeTests.csproj", "{E37B5B75-B995-47E0-B668-54E614CBB637}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{A9BD1852-DFE1-400E-8BB1-908E467DDCF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9BD1852-DFE1-400E-8BB1-908E467DDCF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9BD1852-DFE1-400E-8BB1-908E467DDCF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FD36849-D16E-4584-9A5C-79A6D36838DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FD36849-D16E-4584-9A5C-79A6D36838DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FD36849-D16E-4584-9A5C-79A6D36838DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FD36849-D16E-4584-9A5C-79A6D36838DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E37B5B75-B995-47E0-B668-54E614CBB637}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E37B5B75-B995-47E0-B668-54E614CBB637}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E37B5B75-B995-47E0-B668-54E614CBB637}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E37B5B75-B995-47E0-B668-54E614CBB637}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
