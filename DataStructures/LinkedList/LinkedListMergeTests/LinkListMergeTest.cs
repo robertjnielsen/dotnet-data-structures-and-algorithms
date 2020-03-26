@@ -42,21 +42,5 @@ namespace LinkedListMergeTests
 
             Assert.Equal(expectedList, newList.ToString());
         }
-
-        [Fact]
-        public void CanInputAnEmptyLinkedListWithAListThatHoldsValuesAndReturnAMergedList()
-        {
-            LinkList list1 = new LinkList();
-            list1.Insert(1);
-            list1.Append(3);
-            list1.Append(5);
-
-            LinkList list2 = new LinkList();
-
-            LinkList newList = Program.MergeLists(list1, list2);
-            string expectedList = "1 -> 3 -> 5 -> NULL";
-
-            Assert.Equal(expectedList, newList.ToString());
-        }
     }
 }
