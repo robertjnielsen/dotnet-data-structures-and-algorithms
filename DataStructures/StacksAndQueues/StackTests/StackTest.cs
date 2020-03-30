@@ -89,5 +89,13 @@ namespace StackTests
 
             Assert.ThrowsAny<Exception>(() => testStack.Pop());
         }
+
+        [Fact]
+        public void CallingPeekOnEmptyStackRaisesException()
+        {
+            Stack testStack = new Stack();
+
+            Assert.ThrowsAny<Exception>(() => testStack.Peek());
+        }
     }
 }
