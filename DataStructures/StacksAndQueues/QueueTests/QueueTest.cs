@@ -82,5 +82,20 @@ namespace QueueTests
 
             Assert.Equal(expected, testQueue.Peek());
         }
+
+        [Fact]
+        public void CanSuccessfullyEmptyAQueueAfterMultipleDequeues()
+        {
+            Queue testQueue = new Queue();
+            testQueue.Enqueue(3);
+            testQueue.Enqueue(9);
+            testQueue.Enqueue(19);
+
+            testQueue.Dequeue();
+            testQueue.Dequeue();
+            testQueue.Dequeue();
+
+            Assert.True(testQueue.IsEmpty());
+        }
     }
 }
