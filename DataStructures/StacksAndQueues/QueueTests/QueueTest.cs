@@ -43,5 +43,18 @@ namespace QueueTests
 
             Assert.Equal(expected, testQueue.Front.Value);
         }
+
+        [Fact]
+        public void CanSuccessfullyEnqueueMultipleValuesToAQueue()
+        {
+            Queue testQueue = new Queue();
+            testQueue.Enqueue(3);
+            testQueue.Enqueue(9);
+            testQueue.Enqueue(19);
+
+            int expected = 3;
+
+            Assert.Equal(expected, testQueue.Front.Value);
+        }
     }
 }
