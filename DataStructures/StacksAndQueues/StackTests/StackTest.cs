@@ -68,5 +68,18 @@ namespace StackTests
 
             Assert.Null(testStack.Top);
         }
+
+        [Fact]
+        public void CanSuccessfullyPeekTheNextItemOnTheStack()
+        {
+            Stack testStack = new Stack();
+            testStack.Push(3);
+            testStack.Push(9);
+            testStack.Push(19);
+
+            int expected = 19;
+
+            Assert.Equal(expected, testStack.Peek());
+        }
     }
 }
