@@ -22,5 +22,14 @@ namespace StacksAndQueues.Classes
             newNode.Next = Top;
             Top = newNode;
         }
+
+        /// <summary>
+        /// Tells us if the Stack is empty or not.
+        /// </summary>
+        /// <returns>A boolean value determined by whether or not the Stack is empty.</returns>
+        public bool IsEmpty()
+        {
+            return Top != null;
+        }
     }
 }
