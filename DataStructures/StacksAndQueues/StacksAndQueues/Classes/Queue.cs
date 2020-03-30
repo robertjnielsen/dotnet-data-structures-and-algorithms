@@ -25,11 +25,22 @@ namespace StacksAndQueues.Classes
             // Instantiate a new Node object with the given value.
             Node newNode = new Node(value);
 
-            // Tell the current Rear Node to reference the new Node.
-            Rear.Next = newNode;
+            // Check if the Queue is empty. If so, assign both Front and Rear as the new Node.
+            if (IsEmpty())
+            {
+                Rear = newNode;
 
-            // Tell the Queue that the new Node is now the Rear.
-            Rear = newNode;
+                Front = newNode;
+            }
+            else
+            {
+                // Tell the current Rear Node to reference the new Node.
+                Rear.Next = newNode;
+
+                // Tell the Queue that the new Node is now the Rear.
+                Rear = newNode;
+            }
+
         }
 
         /// <summary>
