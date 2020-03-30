@@ -27,6 +27,10 @@ namespace StacksAndQueues.Classes
             Top = newNode;
         }
 
+        /// <summary>
+        /// Pops the current Top Node off of the Stack.
+        /// </summary>
+        /// <returns>Returns the Value of the Node that was removed from the Stack.</returns>
         public int Pop()
         {
             // Throw an Exception if the Stack is empty.
@@ -45,6 +49,21 @@ namespace StacksAndQueues.Classes
             temp.Next = null;
 
             return temp.Value;
+        }
+
+        /// <summary>
+        /// Gives us the Value of the current Top Node of the Stack.
+        /// </summary>
+        /// <returns>Returns the Value of the Top Node of the Stack.</returns>
+        public int Peek()
+        {
+            // Throw an Exception if the Stack is empty.
+            if (IsEmpty())
+            {
+                throw new Exception("Nothing to Peek! The Stack is empty.");
+            }
+
+            return Top.Value;
         }
 
         /// <summary>
