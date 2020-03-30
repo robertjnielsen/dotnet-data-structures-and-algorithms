@@ -57,6 +57,22 @@ namespace StacksAndQueues.Classes
         }
 
         /// <summary>
+        /// Returns the Value of the Front Node in the Queue.
+        /// </summary>
+        /// <returns>Returns the Value of the Front Node in the Queue.</returns>
+        public int Peek()
+        {
+            // Throw an Exception if the Queue is empty.
+            if (IsEmpty())
+            {
+                throw new Exception("Cannot Peek! The Queue is empty.");
+            }
+
+            return Front.Value;
+
+        }
+
+        /// <summary>
         /// Determines if the Queue is empty or not.
         /// </summary>
         /// <returns>Returns a boolean value determined by whether or not the Queue is empty.</returns>
