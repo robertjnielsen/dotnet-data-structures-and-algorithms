@@ -15,5 +15,16 @@ namespace StackTests
 
             Assert.Null(expected);
         }
+
+        [Fact]
+        public void CanSuccessfullyPushOnToAStack()
+        {
+            Stack testStack = new Stack();
+            testStack.Push(3);
+
+            int expected = 3;
+
+            Assert.Equal(expected, testStack.Top.Value);
+        }
     }
 }
