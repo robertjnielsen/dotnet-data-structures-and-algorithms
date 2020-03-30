@@ -17,10 +17,34 @@ namespace StacksAndQueues.Classes
         /// <param name="value">The value the new Node will hold.</param>
         public void Push(int value)
         {
+            // Instantiate a new Node instance to add to the Stack.
             Node newNode = new Node(value);
 
+            // Tell the new Node to reference the current Top Node.
             newNode.Next = Top;
+
+            // Make the new Node the Top of the Stack.
             Top = newNode;
+        }
+
+        public int Pop()
+        {
+            // Throw an Exception if the Stack is empty.
+            if (IsEmpty())
+            {
+                throw new Exception("Nothing to Pop! The Stack is empty.");
+            }
+
+            // Create a temporary Node reference to the current Top Node.
+            Node temp = Top;
+
+            // Assign Top to the Next Node below it.
+            Top = Top.Next;
+
+            // Tell the temp Node (was Top) to not reference anything anymore.
+            temp.Next = null;
+
+            return temp.Value;
         }
 
         /// <summary>
