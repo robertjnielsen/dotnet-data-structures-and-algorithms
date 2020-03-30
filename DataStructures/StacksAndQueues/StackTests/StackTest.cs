@@ -39,5 +39,19 @@ namespace StackTests
 
             Assert.Equal(expected, testStack.Top.Value);
         }
+
+        [Fact]
+        public void CanSuccessfullyPopOffAStack()
+        {
+            Stack testStack = new Stack();
+            testStack.Push(3);
+            testStack.Push(9);
+            testStack.Push(19);
+
+            int expected = 9;
+            testStack.Pop();
+
+            Assert.Equal(expected, testStack.Top.Value);
+        }
     }
 }
