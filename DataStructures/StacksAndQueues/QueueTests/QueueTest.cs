@@ -23,5 +23,13 @@ namespace QueueTests
 
             Assert.ThrowsAny<Exception>(() => testQueue.Dequeue());
         }
+
+        [Fact]
+        public void CallingPeekOnAnEmptyQueueRaisesAnException()
+        {
+            Queue testQueue = new Queue();
+
+            Assert.ThrowsAny<Exception>(() => testQueue.Peek());
+        }
     }
 }
