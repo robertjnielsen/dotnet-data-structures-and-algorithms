@@ -81,5 +81,13 @@ namespace StackTests
 
             Assert.Equal(expected, testStack.Peek());
         }
+
+        [Fact]
+        public void CallingPopOnEmptyStackRaisesException()
+        {
+            Stack testStack = new Stack();
+
+            Assert.ThrowsAny<Exception>(() => testStack.Pop());
+        }
     }
 }
