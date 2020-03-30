@@ -7,9 +7,13 @@ namespace QueueTests
     public class QueueTest
     {
         [Fact]
-        public void Test1()
+        public void CanSuccessfullyInstantiateAnEmptyQueue()
         {
+            Queue testQueue = new Queue();
 
+            Node expected = testQueue.Front;
+
+            Assert.Null(expected);
         }
     }
 }
