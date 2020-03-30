@@ -6,13 +6,21 @@ namespace StacksAndQueues.Classes
 {
     public class Stack
     {
+        /// <summary>
+        /// The TOP reference of the Stack.
+        /// </summary>
         public Node Top { get; set; } = null;
 
+        /// <summary>
+        /// Pushes a new Node to the Top of the Stack.
+        /// </summary>
+        /// <param name="value">The value the new Node will hold.</param>
         public void Push(int value)
         {
             Node newNode = new Node(value);
 
-
+            newNode.Next = Top;
+            Top = newNode;
         }
     }
 }
