@@ -53,5 +53,20 @@ namespace StackTests
 
             Assert.Equal(expected, testStack.Top.Value);
         }
+
+        [Fact]
+        public void CanSuccessfullyEmptyAStackAfterMultiplePops()
+        {
+            Stack testStack = new Stack();
+            testStack.Push(3);
+            testStack.Push(9);
+            testStack.Push(19);
+
+            testStack.Pop();
+            testStack.Pop();
+            testStack.Pop();
+
+            Assert.Null(testStack.Top);
+        }
     }
 }
