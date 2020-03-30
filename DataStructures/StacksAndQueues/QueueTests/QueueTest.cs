@@ -31,5 +31,17 @@ namespace QueueTests
 
             Assert.ThrowsAny<Exception>(() => testQueue.Peek());
         }
+
+        [Fact]
+        public void CanSuccessfullyEnqueueToAQueue()
+        {
+            Queue testQueue = new Queue();
+
+            testQueue.Enqueue(3);
+
+            int expected = 3;
+
+            Assert.Equal(expected, testQueue.Front.Value);
+        }
     }
 }
