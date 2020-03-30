@@ -15,5 +15,13 @@ namespace QueueTests
 
             Assert.Null(expected);
         }
+
+        [Fact]
+        public void CallingDequeueOnAnEmptyQueueRaisesAnException()
+        {
+            Queue testQueue = new Queue();
+
+            Assert.ThrowsAny<Exception>(() => testQueue.Dequeue());
+        }
     }
 }
