@@ -26,5 +26,18 @@ namespace StackTests
 
             Assert.Equal(expected, testStack.Top.Value);
         }
+
+        [Fact]
+        public void CanSuccessfullyPushMultipleValuesToAStack()
+        {
+            Stack testStack = new Stack();
+            testStack.Push(3);
+            testStack.Push(9);
+            testStack.Push(19);
+
+            int expected = 19;
+
+            Assert.Equal(expected, testStack.Top.Value);
+        }
     }
 }
