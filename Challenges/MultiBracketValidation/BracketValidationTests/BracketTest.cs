@@ -28,5 +28,15 @@ namespace BracketValidationTests
 
             Assert.False(validated);
         }
+
+        [Fact]
+        public void CanValidateMatchingBrackets()
+        {
+            string testString = "{}{Extra}[Characters](())";
+
+            bool validated = Program.MultiBracketValidation(testString);
+
+            Assert.True(validated);
+        }
     }
 }
