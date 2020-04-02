@@ -8,9 +8,14 @@ namespace BracketValidationTests
     public class BracketTest
     {
         [Fact]
-        public void Test1()
+        public void HelperMethodCanSuccessfullyValidateBrackets()
         {
+            char open = '{';
+            char close = '}';
 
+            bool validated = Program.ValidateOnPop(open, close);
+
+            Assert.True(validated);
         }
     }
 }
