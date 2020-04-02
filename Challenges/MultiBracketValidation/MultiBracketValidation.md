@@ -17,6 +17,10 @@ Write a method called `MultiBracketValidation` that takes in a string and return
 
 ## Change Log
 
+**1.1** - 20200402
+- Stack class created.
+- Node class created.
+
 **1.0** - 20200402
 - README / documentation started.
 - Project and solution files created.
