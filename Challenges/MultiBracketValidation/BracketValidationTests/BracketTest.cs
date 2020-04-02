@@ -17,5 +17,16 @@ namespace BracketValidationTests
 
             Assert.True(validated);
         }
+
+        [Fact]
+        public void HelperMethodCanSuccessfullyFalseInvalidBrackets()
+        {
+            char open = '[';
+            char close = ')';
+
+            bool validated = Program.ValidateOnPop(open, close);
+
+            Assert.False(validated);
+        }
     }
 }
