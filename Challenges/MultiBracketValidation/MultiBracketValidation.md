@@ -32,7 +32,13 @@ Space is **O(n)** because every opening bracket is added to the `Stack` as a new
 
 ## Whiteboard Visual
 
+![MultiBracketValidation Whiteboard Image](../../Assets/Images/MultipleBracketValidation.jpg)
+
 ## Change Log
+
+**1.3** - 20200402
+- Documentation complete to current version.
+- All valid tests passed.
 
 **1.2** - 20200402
 - Documentation complete to current version.
