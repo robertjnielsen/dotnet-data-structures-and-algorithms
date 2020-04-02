@@ -31,7 +31,7 @@ namespace MultiBracketValidation.Classes
         /// Pops the current Top Node off of the Stack.
         /// </summary>
         /// <returns>Returns the Value of the Node that was removed from the Stack.</returns>
-        public int Pop()
+        public char Pop()
         {
             // Throw an Exception if the Stack is empty.
             if (IsEmpty())
@@ -55,7 +55,7 @@ namespace MultiBracketValidation.Classes
         /// Gives us the Value of the current Top Node of the Stack.
         /// </summary>
         /// <returns>Returns the Value of the Top Node of the Stack.</returns>
-        public int Peek()
+        public char Peek()
         {
             // Throw an Exception if the Stack is empty.
             if (IsEmpty())
