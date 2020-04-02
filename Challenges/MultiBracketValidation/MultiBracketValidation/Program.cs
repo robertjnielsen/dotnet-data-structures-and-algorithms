@@ -3,7 +3,7 @@ using MultiBracketValidation.Classes;
 
 namespace MultiBracketValidation
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -15,7 +15,7 @@ namespace MultiBracketValidation
         /// </summary>
         /// <param name="input">A string containing any combination of opening and closing brackets.</param>
         /// <returns>Returns a boolean value whether the input string contains valid bracket pairs or not.</returns>
-        static bool MultiBracketValidation(string input)
+        public static bool MultiBracketValidation(string input)
         {
             // Instantiate a bool to return if brackets are validated or not.
             bool validated;
@@ -72,7 +72,7 @@ namespace MultiBracketValidation
         /// <param name="a">Opening bracket on the Top of the Stack object.</param>
         /// <param name="b">Closing bracket located at 'chars[i]' position.</param>
         /// <returns>Returns a boolean if the brackets match or not.</returns>
-        static bool ValidateOnPop(char a, char b)
+        public static bool ValidateOnPop(char a, char b)
         {
             return (a == '{' && b == '}') || (a == '(' && b == ')') || (a == '[' && b == ']');
         }
