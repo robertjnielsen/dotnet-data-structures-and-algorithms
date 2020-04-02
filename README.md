@@ -10,3 +10,4 @@ This repository contains all of the DSA / Code Challenges from the Code Fellows 
 3. [BinarySearch](/Challenges/BinarySearch/BinarySearch.md)
 4. [Linked Lists](/DataStructures/LinkedList/LinkedList.md)
 5. [Stacks And Queues](/DataStructures/StacksAndQueues/StacksAndQueues.md)
+6. [Multiple Bracket Validation](/Challenges/MultiBracketValidation/MultiBracketValidation.md)
