@@ -46,5 +46,29 @@ namespace Trees.Classes
 
             return root;
         }
+
+        /// <summary>
+        /// Traverses a Tree and determines if it contains a Node with the given Value.
+        /// </summary>
+        /// <param name="root">The Node to determine Tree traversal.</param>
+        /// <param name="value">The value to search for in the Tree.</param>
+        /// <returns>Returns a boolean determined by whether or not the Tree contains a Node with the given Value.</returns>
+        public bool Contains(Node root, int value)
+        {
+            if (root.Value == value)
+            {
+                return true;
+            }
+            else if (root.Value > value)
+            {
+                Contains(root.LeftChild, value);
+            }
+            else if (root.Value < value)
+            {
+                Contains(root.RightChild, value);
+            }
+
+            return false;
+        }
     }
 }
