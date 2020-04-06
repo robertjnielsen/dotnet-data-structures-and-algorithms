@@ -34,5 +34,16 @@ namespace TreeTests
 
             Assert.Equal(expected, tree.Root.LeftChild.Value);
         }
+
+        [Fact]
+        public void CanSuccessfullyAddANodeToTheRightChild()
+        {
+            BinarySearchTree tree = new BinarySearchTree(5);
+
+            tree.Add(tree.Root, 9);
+            int expected = 9;
+
+            Assert.Equal(expected, tree.Root.RightChild.Value);
+        }
     }
 }
