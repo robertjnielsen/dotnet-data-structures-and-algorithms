@@ -1,4 +1,5 @@
 using System;
+using Trees.Classes;
 using Xunit;
 
 namespace TreeTests
@@ -6,9 +7,11 @@ namespace TreeTests
     public class UnitTest1
     {
         [Fact]
-        public void Test1()
+        public void CanInstantiateAnEmptyTree()
         {
+            BinaryTree tree = new BinaryTree();
 
+            Assert.Null(tree.Root);
         }
     }
 }
