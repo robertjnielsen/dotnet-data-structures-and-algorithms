@@ -17,10 +17,8 @@ namespace TreeTests
         [Fact]
         public void CanInstantiateNewTreeWithARootNode()
         {
-            BinarySearchTree tree = new BinarySearchTree();
-            Node node = new Node(3);
+            BinarySearchTree tree = new BinarySearchTree(3);
 
-            tree.Root = node;
             int expected = 3;
 
             Assert.Equal(expected, tree.Root.Value);
