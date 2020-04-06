@@ -7,5 +7,6 @@ namespace Trees.Classes
     public class BinaryTree
     {
         public Node Root { get; set; }
+
     }
 }
