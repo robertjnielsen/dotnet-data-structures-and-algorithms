@@ -9,7 +9,7 @@ namespace TreeTests
         [Fact]
         public void CanInstantiateAnEmptyTree()
         {
-            BinaryTree tree = new BinaryTree();
+            BinarySearchTree tree = new BinarySearchTree();
 
             Assert.Null(tree.Root);
         }
