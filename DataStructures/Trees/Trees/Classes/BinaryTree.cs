@@ -37,5 +37,47 @@ namespace Trees.Classes
             return NodeValues.ToArray();
         }
 
+        /// <summary>
+        /// Traverses the Tree in In-Order fashion.
+        /// </summary>
+        /// <param name="root">The Node used to determine Tree traversal.</param>
+        /// <returns>Returns an integer array of all Node values in the In-Order fashion.</returns>
+        public int[] InOrder(Node root)
+        {
+            if (root == null)
+            {
+                return NodeValues.ToArray();
+            }
+
+            InOrder(root.LeftChild);
+
+            NodeValues.Add(root.Value);
+
+            InOrder(root.RightChild);
+
+            return NodeValues.ToArray();
+        }
+
+        /// <summary>
+        /// Traverses the Tree in Post-Order fashion.
+        /// </summary>
+        /// <param name="root">The Node used to determine Tree traversal.</param>
+        /// <returns>Returns an integer array of all Node values in the Tree.</returns>
+        public int[] PostOrder(Node root)
+        {
+            if (root == null)
+            {
+                return NodeValues.ToArray();
+            }
+
+            PostOrder(root.LeftChild);
+
+            PostOrder(root.RightChild);
+
+            NodeValues.Add(root.Value);
+
+            return NodeValues.ToArray();
+        }
+
     }
 }
