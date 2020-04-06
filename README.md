@@ -11,3 +11,4 @@ This repository contains all of the DSA / Code Challenges from the Code Fellows 
 4. [Linked Lists](/DataStructures/LinkedList/LinkedList.md)
 5. [Stacks And Queues](/DataStructures/StacksAndQueues/StacksAndQueues.md)
 6. [Multiple Bracket Validation](/Challenges/MultiBracketValidation/MultiBracketValidation.md)
+7. [Trees](/DataStructures/Trees/Trees.md)
