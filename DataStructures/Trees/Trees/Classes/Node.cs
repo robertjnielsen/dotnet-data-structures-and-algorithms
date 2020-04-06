@@ -12,5 +12,9 @@ namespace Trees.Classes
 
         public Node RightChild { get; set; }
 
+        public Node(int value)
+        {
+            Value = value;
+        }
     }
 }
