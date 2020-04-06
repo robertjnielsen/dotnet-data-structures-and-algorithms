@@ -45,5 +45,17 @@ namespace TreeTests
 
             Assert.Equal(expected, tree.Root.RightChild.Value);
         }
+
+        [Fact]
+        public void CanDetermineIfATreeContainsAGivenValue()
+        {
+            BinarySearchTree tree = new BinarySearchTree(5);
+
+            tree.Add(tree.Root, 3);
+            tree.Add(tree.Root, 7);
+            tree.Add(tree.Root, 4);
+
+            Assert.True(tree.Contains(tree.Root, 4));
+        }
     }
 }
