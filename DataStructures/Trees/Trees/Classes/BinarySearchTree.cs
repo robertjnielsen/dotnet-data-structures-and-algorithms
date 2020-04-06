@@ -61,11 +61,11 @@ namespace Trees.Classes
             }
             else if (root.Value > value)
             {
-                Contains(root.LeftChild, value);
+                return Contains(root.LeftChild, value);
             }
             else if (root.Value < value)
             {
-                Contains(root.RightChild, value);
+                return Contains(root.RightChild, value);
             }
 
             return false;
