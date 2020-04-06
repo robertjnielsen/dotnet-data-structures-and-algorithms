@@ -85,5 +85,19 @@ namespace TreeTests
 
             Assert.Equal(expected, output);
         }
+
+        [Fact]
+        public void CanTraverseATreeInPostOrderFashion()
+        {
+            BinarySearchTree tree = new BinarySearchTree(5);
+            tree.Add(tree.Root, 3);
+            tree.Add(tree.Root, 7);
+            tree.Add(tree.Root, 4);
+
+            int[] output = tree.PostOrder(tree.Root);
+            int[] expected = { 4, 3, 7, 5 };
+
+            Assert.Equal(expected, output);
+        }
     }
 }
