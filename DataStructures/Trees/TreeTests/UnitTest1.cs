@@ -13,5 +13,17 @@ namespace TreeTests
 
             Assert.Null(tree.Root);
         }
+
+        [Fact]
+        public void CanInstantiateNewTreeWithARootNode()
+        {
+            BinarySearchTree tree = new BinarySearchTree();
+            Node node = new Node(3);
+
+            tree.Root = node;
+            int expected = 3;
+
+            Assert.Equal(expected, tree.Root.Value);
+        }
     }
 }
