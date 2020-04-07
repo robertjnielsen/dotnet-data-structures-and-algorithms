@@ -44,7 +44,7 @@ namespace FizzBuzzTree.Classes
         {
             if (root == null)
             {
-                root = new Node(stringValue);
+                root = new Node(stringValue, intValue);
             }
             else if (intValue < root.IntValue)
             {
