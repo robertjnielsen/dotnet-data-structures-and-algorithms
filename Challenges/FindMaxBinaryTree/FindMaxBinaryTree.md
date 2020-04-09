@@ -41,7 +41,13 @@ Space is **O(1)** because nothing new is being instantiated into memory.
 
 ## Whiteboard Visual
 
+![FindMaxBinaryTree Whiteboard Image](../../Assets/Images/FindMaxBinaryTree.png)
+
 ## Change Log
+
+**1.1** - 20200409
+- Whiteboard image added to documentation.
+- Whiteboard complete.
 
 **1.0** - 20200409
 - Created documentation.
