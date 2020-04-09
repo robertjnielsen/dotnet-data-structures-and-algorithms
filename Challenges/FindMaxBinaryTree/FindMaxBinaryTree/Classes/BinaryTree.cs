@@ -27,5 +27,23 @@ namespace FindMaxBinaryTree.Classes
         {
             Root = root;
         }
+
+        public Node Add(Node root, int value)
+        {
+            if (root == null)
+            {
+                root = new Node(value);
+            }
+            else if (root.LeftChild == null)
+            {
+                root.LeftChild = Add(root.LeftChild, value);
+            }
+            else if (root.RightChild == null)
+            {
+                root.RightChild = Add(root.RightChild, value);
+            }
+
+            return root;
+        }
     }
 }
