@@ -7,7 +7,18 @@ namespace FindMaxBinaryTree
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Node node = new Node(0);
+            BinaryTree tree = new BinaryTree(node);
+            tree.Add(tree.Root, 3);
+            tree.Add(tree.Root, 9);
+            tree.Add(tree.Root, 2);
+            tree.Add(tree.Root, 19);
+            tree.Add(tree.Root, 5);
+            tree.Add(tree.Root, 27);
+
+            int maxValue = FindMaxBinaryTree(tree);
+
+            Console.WriteLine(maxValue);
         }
 
         /// <summary>
