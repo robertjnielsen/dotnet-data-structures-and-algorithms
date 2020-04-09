@@ -13,3 +13,4 @@ This repository contains all of the DSA / Code Challenges from the Code Fellows 
 6. [Multiple Bracket Validation](/Challenges/MultiBracketValidation/MultiBracketValidation.md)
 7. [Trees](/DataStructures/Trees/Trees.md)
 8. [FizzBuzzTree](/Challenges/FizzBuzzTree/FizzBuzzTree.md)
+9. [FindMaxBinaryTree](/Challenges/FindMaxBinaryTree/FindMaxBinaryTree.md)
