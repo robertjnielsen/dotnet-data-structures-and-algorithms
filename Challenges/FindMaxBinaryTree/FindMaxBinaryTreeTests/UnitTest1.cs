@@ -13,5 +13,17 @@ namespace FindMaxBinaryTreeTests
 
             Assert.Null(tree.Root);
         }
+
+        [Fact]
+        public void CanInstantiateANewTreeWithARootNode()
+        {
+            Node node = new Node(3);
+            BinaryTree tree = new BinaryTree(node);
+
+            int expected = 3;
+            int value = tree.Root.Value;
+
+            Assert.Equal(expected, value);
+        }
     }
 }
