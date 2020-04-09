@@ -28,22 +28,28 @@ namespace FindMaxBinaryTree.Classes
             Root = root;
         }
 
-        public Node Add(Node root, int value)
+        /// <summary>
+        /// Adds a new Node to the Tree.
+        /// </summary>
+        /// <param name="node">The Node used to traverse the Tree.</param>
+        /// <param name="value">The value to add to the Tree.</param>
+        /// <returns>The Node being acted upon.</returns>
+        public Node Add(Node node, int value)
         {
-            if (root == null)
+            if (node == null)
             {
-                root = new Node(value);
+                node = new Node(value);
             }
-            else if (root.LeftChild == null)
+            else if (value < node.Value)
             {
-                root.LeftChild = Add(root.LeftChild, value);
+                node.LeftChild = Add(node.LeftChild, value);
             }
-            else if (root.RightChild == null)
+            else
             {
-                root.RightChild = Add(root.RightChild, value);
+                node.RightChild = Add(node.RightChild, value);
             }
 
-            return root;
+            return node;
         }
     }
 }
