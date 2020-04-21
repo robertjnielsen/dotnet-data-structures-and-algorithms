@@ -14,3 +14,4 @@ This repository contains all of the DSA / Code Challenges from the Code Fellows 
 7. [Trees](/DataStructures/Trees/Trees.md)
 8. [FizzBuzzTree](/Challenges/FizzBuzzTree/FizzBuzzTree.md)
 9. [FindMaxBinaryTree](/Challenges/FindMaxBinaryTree/FindMaxBinaryTree.md)
+10. [InsertionSort](/Challenges/InsertionSort/InsertionSort.md)
