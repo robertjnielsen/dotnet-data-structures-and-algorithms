@@ -16,3 +16,4 @@ This repository contains all of the DSA / Code Challenges from the Code Fellows 
 9. [FindMaxBinaryTree](/Challenges/FindMaxBinaryTree/FindMaxBinaryTree.md)
 10. [InsertionSort](/Challenges/InsertionSort/InsertionSort.md)
 11. [MergeSort](/Challenges/MergeSort/MergeSort.md)
+12. [QuickSort](/Challenges/QuickSort/QuickSort.md)
