@@ -58,5 +58,19 @@ namespace HashTableTests
 
             Assert.Equal(false, exists);
         }
+
+        [Fact]
+        public void CanRetrieveValueBasedOnKey()
+        {
+            HashTable table = new HashTable(1024);
+
+            table.Add("abc", "Some text.");
+
+            string result = table.Get("abc");
+
+            string expected = "Some text.";
+
+            Assert.Equal(expected, result);
+        }
     }
 }
