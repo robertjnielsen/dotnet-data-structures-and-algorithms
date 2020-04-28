@@ -88,20 +88,25 @@ namespace HashTables.Classes
         public bool Contains(string key)
         {
             int index = Hash(key);
-            var bucket = Table[index];
-            bucket.Current = bucket.Head;
-            Node current = bucket.Current;
 
-            while (current.Key != key)
+            if (Table[index] != null)
             {
-                current = current.Next;
+                var bucket = Table[index];
+                bucket.Current = bucket.Head;
+                Node current = bucket.Current;
+
+                while (current != null)
+                {
+                    if (current.Key == key)
+                    {
+                        return true;
+                    }
+                    current = current.Next;
+                }
+                
+                return false;
             }
 
-            if (current.Key == key)
-            {
-                return true;
-            }
-            
             return false;
         }
 
