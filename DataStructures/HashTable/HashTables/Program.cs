@@ -16,6 +16,10 @@ namespace HashTables
             var value = table.Get("soup");
 
             Console.WriteLine(value);
+
+            var exists = table.Contains("soup");
+
+            System.Console.WriteLine($"Does it exist?  {exists}");
         }
     }
 }
