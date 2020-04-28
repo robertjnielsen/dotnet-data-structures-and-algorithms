@@ -16,5 +16,19 @@ namespace HashTableTests
 
             Assert.True(value < table.Size);
         }
+
+        [Fact]
+        public void HandleACollisionWithinAHashTable()
+        {
+            HashTable table = new HashTable(1024);
+
+            table.Add("abc", "Some text.");
+            table.Add("cba", "Some other text.");
+
+            int value1 = table.Hash("abc");
+            int value2 = table.Hash("cba");
+
+            Assert.Equal(value1, value2);
+        }
     }
 }
