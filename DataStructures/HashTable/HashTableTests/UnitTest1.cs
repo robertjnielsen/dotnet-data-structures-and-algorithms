@@ -72,5 +72,17 @@ namespace HashTableTests
 
             Assert.Equal(expected, result);
         }
+
+        [Fact]
+        public void CanAddKeyValuePairToHashTable()
+        {
+            HashTable table = new HashTable(1024);
+
+            table.Add("abc", "Some text.");
+
+            bool result = table.Contains("abc");
+
+            Assert.True(result);
+        }
     }
 }
