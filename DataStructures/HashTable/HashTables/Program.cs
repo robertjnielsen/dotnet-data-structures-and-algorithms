@@ -13,7 +13,9 @@ namespace HashTables
 
             table.Add("soup", "tomato");
 
-            
+            var value = table.Get("soup");
+
+            Console.WriteLine(value);
         }
     }
 }
