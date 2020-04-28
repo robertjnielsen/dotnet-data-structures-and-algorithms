@@ -17,3 +17,4 @@ This repository contains all of the DSA / Code Challenges from the Code Fellows 
 10. [InsertionSort](/Challenges/InsertionSort/InsertionSort.md)
 11. [MergeSort](/Challenges/MergeSort/MergeSort.md)
 12. [QuickSort](/Challenges/QuickSort/QuickSort.md)
+13. [HashTables](/DataStructures/HashTable/HashTable.md)
