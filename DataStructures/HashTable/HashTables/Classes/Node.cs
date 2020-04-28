@@ -1,4 +1,4 @@
-namespace HashTable.Classes
+namespace HashTables.Classes
 {
     public class Node
     {
@@ -12,7 +12,7 @@ namespace HashTable.Classes
         /// The Value of the Node data.
         /// </summary>
         /// <value></value>
-        public T Value { get; set; }
+        public string Value { get; set; }
 
         /// <summary>
         /// The next Node in the LinkedList.
@@ -25,7 +25,7 @@ namespace HashTable.Classes
         /// </summary>
         /// <param name="key">The Key for the new Node's data.</param>
         /// <param name="value">The Value of the new Node's data.</param>
-        public Node(string key, t value)
+        public Node(string key, string value)
         {
             Key = key;
             Value = value;
