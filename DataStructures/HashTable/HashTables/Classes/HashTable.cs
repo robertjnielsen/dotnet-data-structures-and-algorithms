@@ -81,6 +81,31 @@ namespace HashTables.Classes
         }
 
         /// <summary>
+        /// Determines if a Key is pre-existing in the HashTable.
+        /// </summary>
+        /// <param name="key">The key to search for in the HashTable.</param>
+        /// <returns>True or false.</returns>
+        public bool Contains(string key)
+        {
+            int index = Hash(key);
+            var bucket = Table[index];
+            bucket.Current = bucket.Head;
+            Node current = bucket.Current;
+
+            while (current.Key != key)
+            {
+                current = current.Next;
+            }
+
+            if (current.Key == key)
+            {
+                return true;
+            }
+            
+            return false;
+        }
+
+        /// <summary>
         /// Hashes the inputted Key.
         /// </summary>
         /// <param name="key">The Key to hash.</param>
