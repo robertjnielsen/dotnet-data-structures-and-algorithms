@@ -48,5 +48,15 @@ namespace HashTableTests
             Assert.Equal(expected1, result1);
             Assert.Equal(expected2, result2);
         }
+
+        [Fact]
+        public void CanDetermineIfAKeyExistsInAHashTable()
+        {
+            HashTable table = new HashTable(1024);
+
+            bool exists = table.Contains("abc");
+
+            Assert.Equal(false, exists);
+        }
     }
 }
