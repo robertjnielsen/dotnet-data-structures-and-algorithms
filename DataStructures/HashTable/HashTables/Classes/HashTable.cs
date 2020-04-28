@@ -17,7 +17,7 @@ namespace HashTables.Classes
         /// The array making up the HashTable.
         /// </summary>
         /// <value></value>
-        public LinkedList<Node>[] Table { get; set; }
+        public LinkList[] Table { get; set; }
 
         /// <summary>
         /// Constructor method to instantiate a new HashTable.
@@ -26,7 +26,7 @@ namespace HashTables.Classes
         public HashTable(int size)
         {
             Size = size;
-            Table = new LinkedList<Node>[size];
+            Table = new LinkList[size];
         }
 
         /// <summary>
@@ -36,20 +36,48 @@ namespace HashTables.Classes
         /// <param name="value">The Value to add to the HashTable.</param>
         public void Add(string key, string value)
         {
+            // Hash the key to determine the index to Add to.
             int index = Hash(key);
 
+            // If the current index is empty, instantiate a new LinkList and add a Node containing the key and value.
             if (Table[index] == null)
             {
-                LinkedList<Node> ll = new LinkedList<Node>();
+                LinkList ll = new LinkList();
                 Node newNode = new Node(key, value);
-                ll.AddFirst(newNode);
+                ll.Append(newNode);
                 Table[index] = ll;
             }
+            // If the current index is NOT empty, append a Node containing the key and value to the end of the LinkList.
             else
             {
                 Node newNode = new Node(key, value);
                 Table[index].Append(newNode);
             }
+        }
+
+        /// <summary>
+        /// Retrieve a value in the HashTable by its known key.
+        /// </summary>
+        /// <param name="key">The key to search for in the HashTable.</param>
+        /// <returns>The value associated with the key.</returns>
+        public string Get(string key)
+        {
+            int index = Hash(key);
+            var bucket = Table[index];
+            bucket.Current = bucket.Head;
+            Node current = bucket.Current;
+
+            while (current.Key != key)
+            {
+                current = current.Next;
+            }
+
+            if (current.Key == key)
+            {
+                return current.Value;
+            }
+            
+            return null;
         }
 
         /// <summary>
@@ -61,11 +89,13 @@ namespace HashTables.Classes
         {
             int count = 1;
 
+            // Set count equal to the product of the current count and the ASCII value of each char in the key divided by three.
             foreach (char c in key)
             {
                 count *= c / 3;
             }
 
+            // Grab the remainder of the current count divided by the size of the HashTable.
             count = count % this.Size;
 
             return count;
