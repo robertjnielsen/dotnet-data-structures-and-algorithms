@@ -18,8 +18,10 @@ namespace HashTables
             Console.WriteLine(value);
 
             var exists = table.Contains("soup");
+            var exists2 = table.Contains("abc");
 
             System.Console.WriteLine($"Does it exist?  {exists}");
+            System.Console.WriteLine($"Does it exist?  {exists2}");
         }
     }
 }
